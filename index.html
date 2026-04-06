@@ -10,49 +10,62 @@
     <div class="dashboard-app">
       <header class="dashboard-header">
         <h1>Dashboard</h1>
-        <button type="button">Profile</button>
+        <button type="button" class="profile-btn">Profile</button>
       </header>
 
-      <main class="dashboard-main">
-        <section class="welcome-section">
-          <h2>Welcome back, John</h2>
-          <p>Here's a quick look at your dashboard for today.</p>
-        </section>
+      <p class="profile-message"></p>
 
-        <section class="cards-section">
-          <div class="cards-grid">
-            <div class="card">
-              <h3>Tasks</h3>
-              <p>12</p>
+      <div class="dashboard-layout">
+        <aside class="dashboard-sidebar">
+          <nav class="sidebar-nav" aria-label="Dashboard navigation">
+            <a href="#" class="active">Overview</a>
+            <a href="#">Tasks</a>
+            <a href="#">Activity</a>
+            <a href="#">Messages</a>
+          </nav>
+        </aside>
+
+        <main class="dashboard-main">
+          <section class="welcome-section">
+            <h2>Welcome back, John</h2>
+            <p>Here's a quick look at your dashboard for today.</p>
+          </section>
+
+          <section class="cards-section">
+            <div class="cards-grid">
+              <div class="card">
+                <span class="card-label">Tasks</span>
+                <p>12</p>
+              </div>
+
+              <div class="card">
+                <span class="card-label">Completed</span>
+                <p>8</p>
+              </div>
+
+              <div class="card">
+                <span class="card-label">Progress</span>
+                <p>75%</p>
+              </div>
+
+              <div class="card">
+                <span class="card-label">Messages</span>
+                <p>5</p>
+              </div>
             </div>
+          </section>
 
-            <div class="card">
-              <h3>Completed</h3>
-              <p>8</p>
-            </div>
-
-            <div class="card">
-              <h3>Progress</h3>
-              <p>75%</p>
-            </div>
-
-            <div class="card">
-              <h3>Messages</h3>
-              <p>5</p>
-            </div>
-          </div>
-        </section>
-
-        <div class="dashboard-panels">
+          <div class="dashboard-panels">
             <section class="activity-section">
               <h2>Recent Activity</h2>
               <ul class="activity-list">
                 <li>Completed a task</li>
-                <li>Updated a profile</li>
+                <li>Updated profile</li>
                 <li>Added a new project</li>
                 <li>Checked messages</li>
               </ul>
             </section>
+
             <section class="tasks-section">
               <h2>Tasks</h2>
               <ul class="tasks-list">
@@ -62,8 +75,9 @@
                 <li>Prepare project for portfolio</li>
               </ul>
             </section>
-        </div>
-      </main>
+          </div>
+        </main>
+      </div>
     </div>
 
     <script src="./script.js"></script>

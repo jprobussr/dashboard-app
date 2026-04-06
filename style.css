@@ -131,5 +131,38 @@ body {
 
 .activity-list li + li,
 .tasks-list li + li {
-    margin-top: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.dashboard-panels {
+  display: grid;
+  gap: 1rem;
+}
+
+.dashboard-header button,
+.card {
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.dashboard-header button:hover,
+.dashboard-header button:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+
+@media (min-width: 48rem) {
+  .dashboard-panels {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+  }
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

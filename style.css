@@ -100,8 +100,9 @@ body {
 
 .card p {
   margin: 0;
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: 700;
+  line-height: 1.1;
 }
 
 .activity-section,
@@ -109,7 +110,7 @@ body {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1rem;
+  padding: 1.25rem;
 }
 
 .activity-section {
@@ -136,7 +137,7 @@ body {
 
 .dashboard-panels {
   display: grid;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .dashboard-header button,
@@ -192,13 +193,27 @@ body {
   color: var(--muted);
 }
 
-.tasks-list li.completed {
-    text-decoration: line-through;
-    opacity: 0.6;
+.tasks-list li {
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
 }
 
-.tasks-list li {
-    cursor: pointer;
+.tasks-list li.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.tasks-list li:hover {
+  color: var(--text);
+}
+
+.card,
+.activity-section,
+.tasks-section,
+.dashboard-sidebar {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 @media (min-width: 48rem) {
